@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+._*
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+
+# Node (if ever needed)
+node_modules/
+npm-debug.log*
+
+# Originals — heavy raw photos and old drafts (keep out of the repo)
+DSCF*.jpg
+IMG_*.PNG
+IMG_*.JPG
+*.psd
+*.ai
+*.tif
+*.tiff

@@ -12,6 +12,17 @@
 
   <link rel="canonical" href="https://aaaacademy.ca/" />
 
+  <!-- Hreflang: site is bilingual FR / EN, default FR (Quebec) -->
+  <link rel="alternate" hreflang="fr-CA" href="https://aaaacademy.ca/" />
+  <link rel="alternate" hreflang="en-CA" href="https://aaaacademy.ca/" />
+  <link rel="alternate" hreflang="x-default" href="https://aaaacademy.ca/" />
+
+  <!-- Geo (local SEO: Montréal / Côte-Saint-Luc) -->
+  <meta name="geo.region" content="CA-QC" />
+  <meta name="geo.placename" content="Montréal" />
+  <meta name="geo.position" content="45.4719;-73.6443" />
+  <meta name="ICBM" content="45.4719, -73.6443" />
+
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="AAA Academy | Cours de chant à Montréal | Singing Classes &amp; Performing Arts" />
@@ -43,29 +54,74 @@
   <!-- Preload hero -->
   <link rel="preload" as="image" href="assets/img/hero.jpg" fetchpriority="high" />
 
-  <!-- Structured data: LocalBusiness -->
+  <!-- Structured data: organization, school, founders -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "PerformingArtsTheater",
+    "@type": ["EducationalOrganization", "PerformingArtsTheater"],
+    "@id": "https://aaaacademy.ca/#organization",
     "name": "AAA Academy",
-    "alternateName": "AAA Académie",
-    "description": "Cours de chant, coaching vocal et arts de la scène à Montréal / Côte-Saint-Luc.",
+    "alternateName": ["AAA Académie", "AAA Académie de musique"],
+    "description": "Cours de chant, coaching vocal et arts de la scène (chant, jeu, danse) à Montréal / Côte-Saint-Luc. Singing classes, vocal coaching, and performing arts training in Montreal.",
     "url": "https://aaaacademy.ca/",
+    "logo": "https://aaaacademy.ca/assets/icons/favicon.svg",
     "image": "https://aaaacademy.ca/assets/img/og-cover.jpg",
     "email": "aaacademy2025@hotmail.com",
+    "inLanguage": ["fr-CA", "en-CA"],
+    "knowsLanguage": ["fr", "en", "uk", "ru"],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "6900 Boulevard Décarie, 2e étage #201",
       "addressLocality": "Montréal",
       "addressRegion": "QC",
+      "postalCode": "H3X 2T8",
       "addressCountry": "CA"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.4719,
+      "longitude": -73.6443
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Montréal" },
+      { "@type": "City", "name": "Côte-Saint-Luc" },
+      { "@type": "AdministrativeArea", "name": "Greater Montreal" }
+    ],
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Anna Krivitsky",
+        "jobTitle": "Co-founder",
+        "image": "https://aaaacademy.ca/assets/img/founder-anna-krivitsky.jpg",
+        "sameAs": "https://www.linkedin.com/in/anna-krivitsky-4a0407157/"
+      },
+      {
+        "@type": "Person",
+        "name": "Anna Nehodiuk",
+        "alternateName": "NEGODA",
+        "jobTitle": "Co-founder, Vocal Coach",
+        "image": "https://aaaacademy.ca/assets/img/founder-negoda.jpg",
+        "sameAs": "https://www.linkedin.com/in/anna-nehodiuk-99154222a/"
+      }
+    ],
     "sameAs": [
       "https://www.instagram.com/aaa_academie",
       "https://www.facebook.com/share/1DHLQGUkPt/",
       "https://www.tiktok.com/@aaa_academie"
     ]
+  }
+  </script>
+
+  <!-- Structured data: WebSite (helps Google show sitelinks) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://aaaacademy.ca/#website",
+    "url": "https://aaaacademy.ca/",
+    "name": "AAA Academy",
+    "inLanguage": ["fr-CA", "en-CA"],
+    "publisher": { "@id": "https://aaaacademy.ca/#organization" }
   }
   </script>
 </head>
